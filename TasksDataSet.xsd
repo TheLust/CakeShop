@@ -1,0 +1,343 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TasksDataSet" targetNamespace="http://tempuri.org/TasksDataSet.xsd" xmlns:mstns="http://tempuri.org/TasksDataSet.xsd" xmlns="http://tempuri.org/TasksDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="CakeShopDBConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="CakeShopDBConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.CakeShop.Properties.Settings.GlobalReference.Default.CakeShopDBConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="task10TableAdapter" GeneratorDataComponentClassName="task10TableAdapter" Name="task10" UserDataComponentName="task10TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="CakeShopDBConnectionString (Settings)" DbObjectName="CakeShopDB.dbo.task10" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Product, Mass, Price, Stock, Kg FROM dbo.task10</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Product" DataSetColumn="Product" />
+              <Mapping SourceColumn="Mass" DataSetColumn="Mass" />
+              <Mapping SourceColumn="Price" DataSetColumn="Price" />
+              <Mapping SourceColumn="Stock" DataSetColumn="Stock" />
+              <Mapping SourceColumn="Kg" DataSetColumn="Kg" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="task3TableAdapter" GeneratorDataComponentClassName="task3TableAdapter" Name="task3" UserDataComponentName="task3TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="CakeShopDBConnectionString (Settings)" DbObjectName="CakeShopDB.dbo.task3" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Product, ProductType, Price FROM dbo.task3</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Product" DataSetColumn="Product" />
+              <Mapping SourceColumn="ProductType" DataSetColumn="ProductType" />
+              <Mapping SourceColumn="Price" DataSetColumn="Price" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="task4TableAdapter" GeneratorDataComponentClassName="task4TableAdapter" Name="task4" UserDataComponentName="task4TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="CakeShopDBConnectionString (Settings)" DbObjectName="CakeShopDB.dbo.task4" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Product, Ingredient, Price FROM dbo.task4</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Product" DataSetColumn="Product" />
+              <Mapping SourceColumn="Ingredient" DataSetColumn="Ingredient" />
+              <Mapping SourceColumn="Price" DataSetColumn="Price" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="task5TableAdapter" GeneratorDataComponentClassName="task5TableAdapter" Name="task5" UserDataComponentName="task5TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="CakeShopDBConnectionString (Settings)" DbObjectName="CakeShopDB.dbo.task5" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Product, Ingredient, Quantity FROM dbo.task5</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Product" DataSetColumn="Product" />
+              <Mapping SourceColumn="Ingredient" DataSetColumn="Ingredient" />
+              <Mapping SourceColumn="Quantity" DataSetColumn="Quantity" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="CakeShopDBConnectionString (Settings)" DbObjectName="CakeShopDB.dbo.task5" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Ciocolata" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="Ciocolata" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="Ciocolata">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Product, Ingredient, Quantity
+FROM     task5
+WHERE  (Quantity = @Ciocolata)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Ciocolata" ColumnName="Quantity" DataSourceName="CakeShopDB.dbo.task5" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Ciocolata" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Quantity" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="task6TableAdapter" GeneratorDataComponentClassName="task6TableAdapter" Name="task6" UserDataComponentName="task6TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="CakeShopDBConnectionString (Settings)" DbObjectName="CakeShopDB.dbo.task6" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Product, Ingredient, Quantity FROM dbo.task6</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Product" DataSetColumn="Product" />
+              <Mapping SourceColumn="Ingredient" DataSetColumn="Ingredient" />
+              <Mapping SourceColumn="Quantity" DataSetColumn="Quantity" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="CakeShopDBConnectionString (Settings)" DbObjectName="CakeShopDB.dbo.task6" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Z" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="Z" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="Z">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Product, Ingredient, Quantity
+FROM     task6
+WHERE  (Product = @Product)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Product" ColumnName="Product" DataSourceName="CakeShopDB.dbo.task6" DataTypeServer="varchar(255)" DbType="AnsiString" Direction="Input" ParameterName="@Product" Precision="0" ProviderType="VarChar" Scale="0" Size="255" SourceColumn="Product" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="task7TableAdapter" GeneratorDataComponentClassName="task7TableAdapter" Name="task7" UserDataComponentName="task7TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="CakeShopDBConnectionString (Settings)" DbObjectName="CakeShopDB.dbo.task7" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Product, ProductType, Color FROM dbo.task7</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Product" DataSetColumn="Product" />
+              <Mapping SourceColumn="ProductType" DataSetColumn="ProductType" />
+              <Mapping SourceColumn="Color" DataSetColumn="Color" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="task8TableAdapter" GeneratorDataComponentClassName="task8TableAdapter" Name="task8" UserDataComponentName="task8TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="CakeShopDBConnectionString (Settings)" DbObjectName="CakeShopDB.dbo.task8" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT AvgPrice FROM dbo.task8</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="AvgPrice" DataSetColumn="AvgPrice" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="task9TableAdapter" GeneratorDataComponentClassName="task9TableAdapter" Name="task9" UserDataComponentName="task9TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="CakeShopDBConnectionString (Settings)" DbObjectName="CakeShopDB.dbo.task9" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Product, Mass, Price, Stock FROM dbo.task9</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Product" DataSetColumn="Product" />
+              <Mapping SourceColumn="Mass" DataSetColumn="Mass" />
+              <Mapping SourceColumn="Price" DataSetColumn="Price" />
+              <Mapping SourceColumn="Stock" DataSetColumn="Stock" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="TasksDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="TasksDataSet" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="TasksDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="task10" msprop:Generator_RowClassName="task10Row" msprop:Generator_RowEvHandlerName="task10RowChangeEventHandler" msprop:Generator_RowDeletedName="task10RowDeleted" msprop:Generator_RowDeletingName="task10RowDeleting" msprop:Generator_RowEvArgName="task10RowChangeEvent" msprop:Generator_TablePropName="task10" msprop:Generator_RowChangedName="task10RowChanged" msprop:Generator_UserTableName="task10" msprop:Generator_RowChangingName="task10RowChanging" msprop:Generator_TableClassName="task10DataTable" msprop:Generator_TableVarName="tabletask10">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Product" msprop:Generator_UserColumnName="Product" msprop:Generator_ColumnPropNameInTable="ProductColumn" msprop:Generator_ColumnPropNameInRow="Product" msprop:Generator_ColumnVarNameInTable="columnProduct">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Mass" msprop:Generator_UserColumnName="Mass" msprop:Generator_ColumnPropNameInTable="MassColumn" msprop:Generator_ColumnPropNameInRow="Mass" msprop:Generator_ColumnVarNameInTable="columnMass" type="xs:int" />
+              <xs:element name="Price" msprop:Generator_UserColumnName="Price" msprop:Generator_ColumnPropNameInTable="PriceColumn" msprop:Generator_ColumnPropNameInRow="Price" msprop:Generator_ColumnVarNameInTable="columnPrice" type="xs:double" />
+              <xs:element name="Stock" msprop:Generator_UserColumnName="Stock" msprop:Generator_ColumnPropNameInTable="StockColumn" msprop:Generator_ColumnPropNameInRow="Stock" msprop:Generator_ColumnVarNameInTable="columnStock" type="xs:int" />
+              <xs:element name="Kg" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Kg" msprop:Generator_ColumnPropNameInTable="KgColumn" msprop:Generator_ColumnPropNameInRow="Kg" msprop:Generator_ColumnVarNameInTable="columnKg" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="task3" msprop:Generator_RowClassName="task3Row" msprop:Generator_RowEvHandlerName="task3RowChangeEventHandler" msprop:Generator_RowDeletedName="task3RowDeleted" msprop:Generator_RowDeletingName="task3RowDeleting" msprop:Generator_RowEvArgName="task3RowChangeEvent" msprop:Generator_TablePropName="task3" msprop:Generator_RowChangedName="task3RowChanged" msprop:Generator_UserTableName="task3" msprop:Generator_RowChangingName="task3RowChanging" msprop:Generator_TableClassName="task3DataTable" msprop:Generator_TableVarName="tabletask3">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Product" msprop:Generator_UserColumnName="Product" msprop:Generator_ColumnPropNameInTable="ProductColumn" msprop:Generator_ColumnPropNameInRow="Product" msprop:Generator_ColumnVarNameInTable="columnProduct">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ProductType" msprop:Generator_UserColumnName="ProductType" msprop:Generator_ColumnPropNameInTable="ProductTypeColumn" msprop:Generator_ColumnPropNameInRow="ProductType" msprop:Generator_ColumnVarNameInTable="columnProductType">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Price" msprop:Generator_UserColumnName="Price" msprop:Generator_ColumnPropNameInTable="PriceColumn" msprop:Generator_ColumnPropNameInRow="Price" msprop:Generator_ColumnVarNameInTable="columnPrice" type="xs:double" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="task4" msprop:Generator_RowClassName="task4Row" msprop:Generator_RowEvHandlerName="task4RowChangeEventHandler" msprop:Generator_RowDeletedName="task4RowDeleted" msprop:Generator_RowDeletingName="task4RowDeleting" msprop:Generator_RowEvArgName="task4RowChangeEvent" msprop:Generator_TablePropName="task4" msprop:Generator_RowChangedName="task4RowChanged" msprop:Generator_UserTableName="task4" msprop:Generator_RowChangingName="task4RowChanging" msprop:Generator_TableClassName="task4DataTable" msprop:Generator_TableVarName="tabletask4">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Product" msprop:Generator_UserColumnName="Product" msprop:Generator_ColumnPropNameInTable="ProductColumn" msprop:Generator_ColumnPropNameInRow="Product" msprop:Generator_ColumnVarNameInTable="columnProduct">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Ingredient" msprop:Generator_UserColumnName="Ingredient" msprop:Generator_ColumnPropNameInTable="IngredientColumn" msprop:Generator_ColumnPropNameInRow="Ingredient" msprop:Generator_ColumnVarNameInTable="columnIngredient">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Price" msprop:Generator_UserColumnName="Price" msprop:Generator_ColumnPropNameInTable="PriceColumn" msprop:Generator_ColumnPropNameInRow="Price" msprop:Generator_ColumnVarNameInTable="columnPrice" type="xs:double" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="task5" msprop:Generator_RowClassName="task5Row" msprop:Generator_RowEvHandlerName="task5RowChangeEventHandler" msprop:Generator_RowDeletedName="task5RowDeleted" msprop:Generator_RowDeletingName="task5RowDeleting" msprop:Generator_RowEvArgName="task5RowChangeEvent" msprop:Generator_TablePropName="task5" msprop:Generator_RowChangedName="task5RowChanged" msprop:Generator_UserTableName="task5" msprop:Generator_RowChangingName="task5RowChanging" msprop:Generator_TableClassName="task5DataTable" msprop:Generator_TableVarName="tabletask5">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Product" msprop:Generator_UserColumnName="Product" msprop:Generator_ColumnPropNameInTable="ProductColumn" msprop:Generator_ColumnPropNameInRow="Product" msprop:Generator_ColumnVarNameInTable="columnProduct">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Ingredient" msprop:Generator_UserColumnName="Ingredient" msprop:Generator_ColumnPropNameInTable="IngredientColumn" msprop:Generator_ColumnPropNameInRow="Ingredient" msprop:Generator_ColumnVarNameInTable="columnIngredient">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Quantity" msprop:Generator_UserColumnName="Quantity" msprop:Generator_ColumnPropNameInTable="QuantityColumn" msprop:Generator_ColumnPropNameInRow="Quantity" msprop:Generator_ColumnVarNameInTable="columnQuantity" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="task6" msprop:Generator_RowClassName="task6Row" msprop:Generator_RowEvHandlerName="task6RowChangeEventHandler" msprop:Generator_RowDeletedName="task6RowDeleted" msprop:Generator_RowDeletingName="task6RowDeleting" msprop:Generator_RowEvArgName="task6RowChangeEvent" msprop:Generator_TablePropName="task6" msprop:Generator_RowChangedName="task6RowChanged" msprop:Generator_UserTableName="task6" msprop:Generator_RowChangingName="task6RowChanging" msprop:Generator_TableClassName="task6DataTable" msprop:Generator_TableVarName="tabletask6">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Product" msprop:Generator_UserColumnName="Product" msprop:Generator_ColumnPropNameInTable="ProductColumn" msprop:Generator_ColumnPropNameInRow="Product" msprop:Generator_ColumnVarNameInTable="columnProduct">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Ingredient" msprop:Generator_UserColumnName="Ingredient" msprop:Generator_ColumnPropNameInTable="IngredientColumn" msprop:Generator_ColumnPropNameInRow="Ingredient" msprop:Generator_ColumnVarNameInTable="columnIngredient">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Quantity" msprop:Generator_UserColumnName="Quantity" msprop:Generator_ColumnPropNameInTable="QuantityColumn" msprop:Generator_ColumnPropNameInRow="Quantity" msprop:Generator_ColumnVarNameInTable="columnQuantity" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="task7" msprop:Generator_RowClassName="task7Row" msprop:Generator_RowEvHandlerName="task7RowChangeEventHandler" msprop:Generator_RowDeletedName="task7RowDeleted" msprop:Generator_RowDeletingName="task7RowDeleting" msprop:Generator_RowEvArgName="task7RowChangeEvent" msprop:Generator_TablePropName="task7" msprop:Generator_RowChangedName="task7RowChanged" msprop:Generator_UserTableName="task7" msprop:Generator_RowChangingName="task7RowChanging" msprop:Generator_TableClassName="task7DataTable" msprop:Generator_TableVarName="tabletask7">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Product" msprop:Generator_UserColumnName="Product" msprop:Generator_ColumnPropNameInTable="ProductColumn" msprop:Generator_ColumnPropNameInRow="Product" msprop:Generator_ColumnVarNameInTable="columnProduct">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ProductType" msprop:Generator_UserColumnName="ProductType" msprop:Generator_ColumnPropNameInTable="ProductTypeColumn" msprop:Generator_ColumnPropNameInRow="ProductType" msprop:Generator_ColumnVarNameInTable="columnProductType">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Color" msprop:Generator_UserColumnName="Color" msprop:Generator_ColumnPropNameInTable="ColorColumn" msprop:Generator_ColumnPropNameInRow="Color" msprop:Generator_ColumnVarNameInTable="columnColor">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="task8" msprop:Generator_RowClassName="task8Row" msprop:Generator_RowEvHandlerName="task8RowChangeEventHandler" msprop:Generator_RowDeletedName="task8RowDeleted" msprop:Generator_RowDeletingName="task8RowDeleting" msprop:Generator_RowEvArgName="task8RowChangeEvent" msprop:Generator_TablePropName="task8" msprop:Generator_RowChangedName="task8RowChanged" msprop:Generator_UserTableName="task8" msprop:Generator_RowChangingName="task8RowChanging" msprop:Generator_TableClassName="task8DataTable" msprop:Generator_TableVarName="tabletask8">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AvgPrice" msprop:Generator_UserColumnName="AvgPrice" msprop:Generator_ColumnPropNameInTable="AvgPriceColumn" msprop:Generator_ColumnPropNameInRow="AvgPrice" msprop:Generator_ColumnVarNameInTable="columnAvgPrice" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="task9" msprop:Generator_RowClassName="task9Row" msprop:Generator_RowEvHandlerName="task9RowChangeEventHandler" msprop:Generator_RowDeletedName="task9RowDeleted" msprop:Generator_RowDeletingName="task9RowDeleting" msprop:Generator_RowEvArgName="task9RowChangeEvent" msprop:Generator_TablePropName="task9" msprop:Generator_RowChangedName="task9RowChanged" msprop:Generator_UserTableName="task9" msprop:Generator_RowChangingName="task9RowChanging" msprop:Generator_TableClassName="task9DataTable" msprop:Generator_TableVarName="tabletask9">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Product" msprop:Generator_UserColumnName="Product" msprop:Generator_ColumnPropNameInTable="ProductColumn" msprop:Generator_ColumnPropNameInRow="Product" msprop:Generator_ColumnVarNameInTable="columnProduct">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Mass" msprop:Generator_UserColumnName="Mass" msprop:Generator_ColumnPropNameInTable="MassColumn" msprop:Generator_ColumnPropNameInRow="Mass" msprop:Generator_ColumnVarNameInTable="columnMass" type="xs:int" />
+              <xs:element name="Price" msprop:Generator_UserColumnName="Price" msprop:Generator_ColumnPropNameInTable="PriceColumn" msprop:Generator_ColumnPropNameInRow="Price" msprop:Generator_ColumnVarNameInTable="columnPrice" type="xs:double" />
+              <xs:element name="Stock" msprop:Generator_UserColumnName="Stock" msprop:Generator_ColumnPropNameInTable="StockColumn" msprop:Generator_ColumnPropNameInRow="Stock" msprop:Generator_ColumnVarNameInTable="columnStock" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

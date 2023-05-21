@@ -17,6 +17,7 @@ namespace CakeShop
     {
         DataService service;
         Product toUpdate;
+        int productId;
         public Main()
         {
             InitializeComponent();
@@ -30,11 +31,25 @@ namespace CakeShop
             addBtn.Show();
         }
 
+        private string getIngredients(int prodId)
+        {
+            string sg = "";
+            foreach(ProductIngredient pi in service.GetAllProductIngredients())
+            {
+                if (pi.Product == prodId)
+                    sg += pi.Ingredient1.Name + " " + pi.Quantity + " ";
+            }
+
+            return sg;
+        }
+
         private void showProducts()
         {
             typeCB.Items.Clear();
             colorCB.Items.Clear();
             productDataGridView.Columns.Clear();
+            ingredientGB.Visible = false;
+            productGB.Visible = true;
 
             nameTB.Text = "";
             typeCB.Text = "";
@@ -61,10 +76,12 @@ namespace CakeShop
                                 Color = p.Color1.Name,
                                 Price = p.Price,
                                 Mass = p.Mass,
-                                Stock = p.Stock
+                                Stock = p.Stock,
+                                Ingredients = getIngredients(p.Id)
                             });
 
             productDataGridView.DataSource = products.ToList();
+            productDataGridView.Columns[0].Visible = true;
 
             productDataGridView.Columns.Add(new DataGridViewImageColumn()
             {
@@ -80,6 +97,40 @@ namespace CakeShop
                 ImageLayout = DataGridViewImageCellLayout.Zoom,
                 HeaderText = "Delete",
                 Name = "delete"
+            });
+        }
+
+        private void showIngredients()
+        {
+            ingredientCB.Items.Clear();
+            productDataGridView.Columns.Clear();
+            ingredientCB.Text = "";
+            quantityTB.Text = "";
+            ingredientGB.Visible = true;
+
+            foreach (Ingredient ingredient in service.GetAllIngredients())
+            {
+                ingredientCB.Items.Add(ingredient.Name);
+            }
+
+            var ingredients = (from pi in service.GetAllProductIngredients()
+                               where pi.Product == productId
+                               select new
+                               {
+                                   ID = pi.Id,
+                                   Ingredient = pi.Ingredient1.Name,
+                                   Quantity = pi.Quantity
+                               });
+
+            productDataGridView.DataSource = ingredients.ToList();
+            productDataGridView.Columns[0].Visible = false;
+
+            productDataGridView.Columns.Add(new DataGridViewImageColumn()
+            {
+                Image = CakeShop.Properties.Resources.delete,
+                ImageLayout = DataGridViewImageCellLayout.Zoom,
+                HeaderText = "Delete",
+                Name = "deleteIng"
             });
         }
 
@@ -135,11 +186,13 @@ namespace CakeShop
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+                return;
             }
 
+            productId = toUpdate.Id;
             updateBtn.Hide();
             addBtn.Show();
-            showProducts();
+            showIngredients();
         }
 
         private void addBtn_Click(object sender, EventArgs e)
@@ -197,8 +250,11 @@ namespace CakeShop
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+                return;
             }
-            showProducts();
+
+            productId = service.FindProductByName(product.Name).Id;
+            showIngredients();
         }
 
         private void massTB_KeyPress(object sender, KeyPressEventArgs e)
@@ -227,7 +283,7 @@ namespace CakeShop
 
         private void productDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 6)
+            if (e.ColumnIndex == 7)
             {
                 toUpdate = service.FindProductByName(productDataGridView.Rows[e.RowIndex].Cells[0].Value.ToString());
                 updateBtn.Show();
@@ -240,18 +296,93 @@ namespace CakeShop
                 stockTB.Text = toUpdate.Stock.ToString();
             }
 
-            if (e.ColumnIndex == 7)
+            if (e.ColumnIndex == 8)
             {
                 try
                 {
+                    foreach (ProductIngredient pi in service.GetAllProductIngredients())
+                    {
+                        if (pi.Product == service.FindProductByName(productDataGridView.Rows[e.RowIndex].Cells[0].Value.ToString()).Id)
+                            service.DeleteProductIngredient(pi.Id);
+                    }
                     service.DeleteProduct(service.FindProductByName(productDataGridView.Rows[e.RowIndex].Cells[0].Value.ToString()).Id);
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
+                    return;
                 }
                 showProducts();
             }
+
+            if (productDataGridView.Columns[e.ColumnIndex].Name.Equals("deleteIng"))
+            {
+                try
+                {
+                    service.DeleteProductIngredient((int)productDataGridView.Rows[e.RowIndex].Cells[0].Value);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message); return;
+                }
+                showIngredients();
+            }
+        }
+
+        private void addIngredientBtn_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(ingredientCB.Text))
+            {
+                MessageBox.Show("Ingredient cannot be null or whitespace!");
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(quantityTB.Text))
+            {
+                MessageBox.Show("Quantity cannot be null or whitespace!");
+                return;
+            }
+
+            ProductIngredient productIngredient = new ProductIngredient()
+            {
+                Product = productId,
+                Ingredient = service.FindIngredientByName(ingredientCB.Text).Id,
+                Quantity = Convert.ToInt32(quantityTB.Text)
+            };
+
+            try
+            {
+                service.AddProductIngredient(productIngredient);
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return;
+            }
+
+            showIngredients();
+        }
+
+        private void doneBtn_Click(object sender, EventArgs e)
+        {
+            showProducts();
+        }
+
+        private void quantityTB_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != '\b') // Check if the entered character is not a digit and not a backspace
+            {
+                e.Handled = true; // Mark the event as handled to prevent the character from being entered
+            }
+        }
+
+        private void tasksBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Tasks tasks= new Tasks();
+            tasks.ShowDialog();
+            this.Show();
         }
     }
 }
